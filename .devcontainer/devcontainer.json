@@ -1,7 +1,8 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/bananalab/devcontainer-features/direnv:latest": {}
+    "ghcr.io/bananalab/devcontainer-features/direnv:latest": {},
+    "ghcr.io/bananalab/devcontainer-features/tfenv:latest": {}
   },
   "customizations": {
 		"vscode": {
