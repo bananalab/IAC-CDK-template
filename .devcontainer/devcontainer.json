@@ -1,9 +1,6 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers/features/aws-cli:1": {},
-    "ghcr.io/devcontainers/features/azure-cli:1": {},
-    "ghcr.io/devcontainers/features/common-utils:1": {},
     "ghcr.io/bananalab/devcontainer-features/direnv:latest": {}
   },
   "customizations": {
