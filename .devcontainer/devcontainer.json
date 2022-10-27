@@ -10,8 +10,7 @@
   "features": {
     "ghcr.io/bananalab/devcontainer-features/cdk:latest": {},
     "ghcr.io/bananalab/devcontainer-features/direnv:latest": {},
-    "ghcr.io/bananalab/devcontainer-features/pre-commit:latest": {},
-    "ghcr.io/bananalab/devcontainer-features/devcontainer-features:latest": {}
+    "ghcr.io/bananalab/devcontainer-features/pre-commit:latest": {}
   },
   "image": "mcr.microsoft.com/devcontainers/universal:2"
 }
