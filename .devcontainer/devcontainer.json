@@ -1,20 +1,16 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/bananalab/devcontainer-features/direnv:latest": {},
-    "ghcr.io/bananalab/devcontainer-features/tfenv:latest": {},
-    "ghcr.io/bananalab/devcontainer-features/cdk:latest": {},
-    "ghcr.io/bananalab/devcontainer-features/pre-commit:latest": {},
-    "ghcr.io/bananalab/devcontainer-features/checkov:latest": {},
-    "ghcr.io/bananalab/devcontainer-features/terraform-docs:latest": {}
-  },
   "customizations": {
-		"vscode": {
-			"settings": { 
-			},
-			"extensions": [
-				"bananalab.bananalab-iac-development-pack"
-			]
-		}
-	}
+    "vscode": {
+      "extensions": [
+        "bananalab.bananalab-iac-development-pack"
+      ],
+      "settings": {}
+    }
+  },
+  "features": {
+    "ghcr.io/bananalab/devcontainer-features/cdk:latest": {},
+    "ghcr.io/bananalab/devcontainer-features/direnv:latest": {},
+    "ghcr.io/bananalab/devcontainer-features/pre-commit:latest": {}
+  },
+  "image": "mcr.microsoft.com/devcontainers/universal:2"
 }
