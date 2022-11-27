@@ -2,15 +2,27 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "bananalab.bananalab-iac-development-pack"
+        "amazonwebservices.aws-toolkit-vscode"
       ],
       "settings": {}
     }
   },
+  "dockerFile": "Dockerfile",
   "features": {
-    "ghcr.io/bananalab/devcontainer-features/cdk:latest": {},
-    "ghcr.io/bananalab/devcontainer-features/direnv:latest": {},
+    "ghcr.io/bananalab/devcontainer-features/aws-cli:latest": {},
     "ghcr.io/bananalab/devcontainer-features/pre-commit:latest": {}
   },
-  "image": "mcr.microsoft.com/devcontainers/universal:2"
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
+  ],
+  "name": "Docker from Docker",
+  "overrideCommand": false,
+  "postStartCommand": "pre-commit install",
+  "remoteEnv": {
+    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  },
+  "remoteUser": "vscode",
+  "runArgs": [
+    "--init"
+  ]
 }
