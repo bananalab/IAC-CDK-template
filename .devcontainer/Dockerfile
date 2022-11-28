@@ -35,5 +35,9 @@ ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]
 
 # install additional OS packages.
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends python3-pip nodejs npm
+RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo bash - \
+    && curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - \
+    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list \
+    && apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends python3-pip python3-venv nodejs gcc g++ make yarn \
+    && update-alternatives --install /usr/bin/python python /usr/bin/python3 1
