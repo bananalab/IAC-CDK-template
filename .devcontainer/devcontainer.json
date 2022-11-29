@@ -4,7 +4,9 @@
           "extensions": [
               "amazonwebservices.aws-toolkit-vscode"
           ],
-          "settings": {}
+          "settings": {
+              "terminal.integrated.defaultProfile.linux": "zsh"
+          }
       }
   },
   "features": {
